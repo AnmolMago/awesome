@@ -1,0 +1,16 @@
+{
+  "name": "awesome",
+  "version": "0.0.1",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "eslint": "^5.10.0",
+    "jest": "^23.6.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Anmol Mago",
+  "license": "UNLICENSED"
+}
