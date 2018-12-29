@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+if [ -z "$1" ] || [ "$#" -ne 1 ]; then
+    echo -e "USAGE: $0 {Component Name} to create component and associated files"
+    exit 1
+fi
+
+SRC_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && cd ../src && pwd )"
+cd $SRC_DIR
+
+NAME=$1
+echo "Creating component $NAME"
+
+mkdir $NAME
+for file in .template/*; do
+    filename=$(basename -- "$file")
+    extension="${filename##*.}"
+    filename="${filename%.*}"
+    
+    cp $file $NAME/${filename/App/$NAME}.$extension
+done
+
+cd $NAME
+
+ls | xargs sed -Ei -e "s/App/$NAME/g"
+rm *-e

@@ -1,0 +1,16 @@
+{
+  "name": "awesome",
+  "version": "1.0.0",
+  "main": "awesome.js",
+  "author": "Anmol Mago",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "crawler": "^1.2.0",
+    "lodash": "^4.17.11",
+    "puppeteer": "^1.11.0",
+    "seenreq": "^2.0.0",
+    "x-ray": "^2.3.3"
+  }
+}

@@ -1,0 +1,25 @@
+@import "../utils/colors";
+
+$side: 65px;
+
+.Logo {
+    width: $side;
+    height: $side;
+    border-radius: $side;
+    text-align: center;
+    p {
+        margin: 0 0 0 1px;
+        color: white;
+        font-size: $side*1.4;
+        line-height: $side*1.05;
+        font-family: 'Heebo', sans-serif;
+        font-weight: 800;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: $primary;
+
+        .active {
+            font-weight: 500;
+        }
+
+    }
+}
